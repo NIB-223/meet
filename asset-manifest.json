@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/meet/static/css/main.a617e044.chunk.css",
+    "main.js": "/meet/static/js/main.425890b4.chunk.js",
+    "main.js.map": "/meet/static/js/main.425890b4.chunk.js.map",
+    "runtime-main.js": "/meet/static/js/runtime-main.4debe955.js",
+    "runtime-main.js.map": "/meet/static/js/runtime-main.4debe955.js.map",
+    "static/js/2.00d510ba.chunk.js": "/meet/static/js/2.00d510ba.chunk.js",
+    "static/js/2.00d510ba.chunk.js.map": "/meet/static/js/2.00d510ba.chunk.js.map",
+    "static/js/3.0f9b6292.chunk.js": "/meet/static/js/3.0f9b6292.chunk.js",
+    "static/js/3.0f9b6292.chunk.js.map": "/meet/static/js/3.0f9b6292.chunk.js.map",
+    "index.html": "/meet/index.html",
+    "service-worker.js": "/meet/service-worker.js",
+    "service-worker.js.map": "/meet/service-worker.js.map",
+    "static/css/main.a617e044.chunk.css.map": "/meet/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.00d510ba.chunk.js.LICENSE.txt": "/meet/static/js/2.00d510ba.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/meet/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4debe955.js",
+    "static/js/2.00d510ba.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.425890b4.chunk.js"
+  ]
+}
