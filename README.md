@@ -59,3 +59,13 @@ As a user, I should be able to view a chart showing upcoming events in each city
 - When: user clicks on chart
 - Then: user sees chart showing upcoming events in each city 
 
+
+
+# Tools/Dependencies
+- Google Calendar API
+- AWS Lambda
+- React
+- Jest (testing framework)
+- Enzyme (testing utility)
+
+ 
