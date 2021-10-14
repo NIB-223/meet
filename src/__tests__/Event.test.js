@@ -23,7 +23,16 @@ describe('<Event /> component', () => {
     test("show details of event", () => {
         expect(EventWrapper.find(".details")).toHaveLength(1);
     });
+    test("show details button", () => {
+        expect(EventWrapper.find(".detailsBtn")).toHaveLength(1);
+    });
 
+    test("extra info is shown when user clicks on details button", () => {
+        EventWrapper.setState({
+            detailsOpen: true,
+        });
+        const openDetails = {}
+    })
 
 });
 
