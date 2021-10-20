@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Event from '../Event';
+import { mockData } from '../mock-data';
 
 describe('<Event /> component', () => {
     let EventWrapper;
     beforeAll(() => {
-        EventWrapper = shallow(<Event />);
+        EventWrapper = shallow(<Event event={mockData[1]} />);
     });
 
     test("show event title", () => {
@@ -28,11 +29,11 @@ describe('<Event /> component', () => {
     });
 
     test("extra info is shown when user clicks on details button", () => {
-        EventWrapper.setState({
-            detailsOpen: true,
-        });
-        const openDetails = {}
-    })
+        expect(EventWrapper.find('.detailsBtn').text()).toBe('more details');
+        EventWrapper.find('.detailsBtn').simulate('click');
+        expect(EventWrapper.find('.details')).toHaveLength(1);
+        expect(EventWrapper.find('.detailsBtn').text()).toBe('less details');
+
+    });
 
 });
-
