@@ -9,9 +9,12 @@ class Event extends Component {
     }
 
     showDetails() {
-        let button = document.querySelector(".detailsBtn");
-        return (this.state.detailsOpen = false ? button.innerText = "more details" : "less details");
-    }
+        if (this.state.detailsOpen === false) {
+            this.setState({ detailsOpen: true })
+        } else {
+            this.setState({ detailsOpen: false })
+        }
+    };
 
     render() {
         const { event } = this.props
@@ -22,8 +25,7 @@ class Event extends Component {
                 <p className="location">{event.location}</p>
                 <h2>About event:</h2>
                 <a className="link" href="#">See details on Google Calendar</a>
-                <p className="details">{this.state.detailsOpen ? "" : event.description}</p>
-
+                <p className="details">{!this.state.detailsOpen ? "" : event.description}</p>
                 <button className="detailsBtn" onClick={() => {
                     this.showDetails()
                 }}>
