@@ -64,6 +64,7 @@ const removeQuery = () => {
     }
 };
 
+//gets access token if one doesn't extist
 const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const { access_token } = await fetch(
