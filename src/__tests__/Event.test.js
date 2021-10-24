@@ -25,23 +25,23 @@ describe('<Event /> component', () => {
         expect(EventWrapper.find(".details")).toHaveLength(1);
     });
     test("render details button", () => {
-        expect(EventWrapper.find(".detailsBtn")).toHaveLength(1);
+        expect(EventWrapper.find(".details-btn")).toHaveLength(1);
     });
     test('render more details button', () => {
         expect(EventWrapper.state("detailsOpen")).toBe(false);
-        expect(EventWrapper.find(".detailsBtn").text()).toBe('more details');
+        expect(EventWrapper.find(".details-btn").text()).toBe('more details');
     });
 
     test("extra info is shown when user clicks on details button", () => {
-        EventWrapper.find('.detailsBtn').simulate('click');
+        EventWrapper.find('.details-btn').simulate('click');
         expect(EventWrapper.find('.details')).toHaveLength(1);
-        expect(EventWrapper.find('.detailsBtn').text()).toBe('less details');
+        expect(EventWrapper.find('.details-btn').text()).toBe('less details');
     });
 
     test('render less details on less details button click', () => {
         EventWrapper.setState({ detailsOpen: true });
-        EventWrapper.find('.detailsBtn').simulate('click');
-        expect(EventWrapper.find('.detailsBtn').text()).toBe('more details');
+        EventWrapper.find('.details-btn').simulate('click');
+        expect(EventWrapper.find('.details-btn').text()).toBe('more details');
         expect(EventWrapper.find('.details').text()).toBe('');
 
     })

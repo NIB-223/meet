@@ -7,7 +7,6 @@ import { extractLocations, getEvents } from '../api';
 
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
-import Event from '../Event';
 import NumberOfEvents from '../NumberOfEvents';
 
 describe('<App /> component', () => {
@@ -22,10 +21,6 @@ describe('<App /> component', () => {
 
     test('render CitySearch', () => {
         expect(AppWrapper.find(CitySearch)).toHaveLength(1);
-    });
-
-    test('render Event', () => {
-        expect(AppWrapper.find(Event)).toHaveLength(1);
     });
 
     test('render NumberOfEvents', () => {

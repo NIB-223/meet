@@ -1,8 +1,4 @@
-//goes inside of eventlist
 import React, { Component } from "react";
-
-
-
 
 class Event extends Component {
     state = {
@@ -20,14 +16,14 @@ class Event extends Component {
     render() {
         const { event } = this.props
         return (
-            <div>
+            <div className="event">
                 <h1 className="name">{event.summary}</h1>
                 <p className="date">{new Date(event.start.dateTime).toString()}</p>
                 <p className="location">{event.location}</p>
-                <h2>About event:</h2>
+                <h3>About event:</h3>
                 <a className="link" href="#">See details on Google Calendar</a>
                 <p className="details">{!this.state.detailsOpen ? "" : event.description}</p>
-                <button className="detailsBtn" onClick={() => {
+                <button className="details-btn" onClick={() => {
                     this.showDetails()
                 }}>
                     {!this.state.detailsOpen ? "more details" : "less details"}
