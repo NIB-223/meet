@@ -1,6 +1,7 @@
 import { mockData } from './mock-data';
 import axios from 'axios';
 import NProgress from 'nprogress';
+import { handleChangeNumber } from './NumberOfEvents';
 
 //takes an events array, then uses map to create a new array with only locations
 //its also removes all duplicates
@@ -9,6 +10,11 @@ export const extractLocations = (events) => {
     var locations = [...new Set(extractLocations)];
     return locations;
 };
+
+export const extractNumOfEvents = (events) => {
+    var extractNumOfEvents = events.map((event) => event.length);
+    return extractNumOfEvents;
+}
 
 //checks whether the accessToken found is valid or not, if not then redirect & send user to Google Auth Screen
 const checkToken = async (accessToken) => {
