@@ -9,9 +9,7 @@ describe("<NumberOfEvents /> component", () => {
     });
 
     test("textbox is rendered", () => {
-        expect(
-            NumberOfEventsWrapper.find(".numberOfEvents")
-        ).toHaveLength(1);
+        expect(NumberOfEventsWrapper.find(".numberOfEvents")).toHaveLength(1);
     });
 
     test("render default 32 events", () => {
@@ -21,10 +19,7 @@ describe("<NumberOfEvents /> component", () => {
 
     test("render change of state when text input is completed", () => {
         const eventsInput = { target: { value: 16 } };
-        NumberOfEventsWrapper.find(".change-number").simulate(
-            "change",
-            eventsInput
-        );
+        NumberOfEventsWrapper.find(".change-number").simulate("change", eventsInput);
         expect(NumberOfEventsWrapper.state("numberOfEvents")).toBe(16);
     });
 

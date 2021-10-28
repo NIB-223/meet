@@ -89,5 +89,6 @@ As a user, I should be able to view a chart showing upcoming events in each city
 - React
 - Jest (testing framework)
 - Enzyme (testing utility)
+- jest-cucumber
 
  
