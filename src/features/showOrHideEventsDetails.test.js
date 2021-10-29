@@ -62,7 +62,7 @@ defineFeature(feature, test => {
         });
 
         when('user clicks on details button to collapse it', () => {
-            EventWrapper.find("details-btn").simulate('click');
+            EventWrapper.find(".details-btn").simulate('click');
         });
 
         then('element collapses, hiding details', () => {
