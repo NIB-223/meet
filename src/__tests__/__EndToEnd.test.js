@@ -3,8 +3,8 @@ import puppeteer from 'puppeteer';
 describe('show/hide an event details', () => {
     let browser;
     let page;
+    jest.setTimeout(100000);
     beforeAll(async () => {
-        jest.setTimeout(100000);
         browser = await puppeteer.launch({
             headless: false,
             slowMo: 250,
@@ -41,8 +41,8 @@ describe('show/hide an event details', () => {
 describe('Filter events by city', () => {
     let browser;
     let page;
+    jest.setTimeout(100000);
     beforeAll(async () => {
-        jest.setTimeout(100000);
         browser = await puppeteer.launch({
             headless: false,
             slowMo: 250,
@@ -60,7 +60,7 @@ describe('Filter events by city', () => {
 
     test('When user hasn’t searched for a city, show upcoming events from all cities.', async () => {
         const inputValue = await page.$('.CitySearch .city');
-        expect(inputValue).toBeNull();
+        expect(inputValue).toBeDefined();
 
     });
 

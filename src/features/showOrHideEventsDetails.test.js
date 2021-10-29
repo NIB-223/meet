@@ -2,8 +2,8 @@ import { loadFeature, defineFeature } from 'jest-cucumber';
 import React from 'react';
 import { mount } from 'enzyme';
 import App from '../App';
-import EventList from '../App';
-import Event from '../App';
+import EventList from '../EventList';
+import Event from '../Event';
 import { mockData } from '../mock-data';
 
 
@@ -28,7 +28,7 @@ defineFeature(feature, test => {
         });
 
         then('user should see the collapsed event elements', () => {
-            expect(EventWrapper.find(".details")).toHaveLength(0);
+            expect(EventWrapper.find(".details").text()).toBe("");
         });
     });
 
@@ -46,8 +46,8 @@ defineFeature(feature, test => {
         });
 
         then('element expands, showing details', () => {
-            AppWrapper.find('.details').toHaveLength(1);
-            expect(AppWrapper.state('detailsOpen')).toBe(true);
+            expect(EventWrapper.find(".details").text()).not.toBe("");
+            expect(EventWrapper.state('detailsOpen')).toBe(true);
         });
     });
 
@@ -58,15 +58,15 @@ defineFeature(feature, test => {
             AppWrapper = mount(<App />);
             EventListWrapper = mount(<EventList events={mockData} />);
             EventWrapper = mount(<Event event={mockData[1]} />);
+            EventWrapper.setState({ detailsOpen: true });
         });
 
-        when('user clicks on details button to collpase it', () => {
-            EventWrapper.find("details-btn").simulate('click');
-
+        when('user clicks on details button to collapse it', () => {
+            AppWrapper.find("details-btn").simulate('click');
         });
 
         then('element collapses, hiding details', () => {
-            EventWrapper.find('.details').toHaveLength(0);
+            expect(EventWrapper.find('.details').text()).toBe('');
             expect(EventWrapper.state('detailsOpen')).toBe(false);
         });
     });

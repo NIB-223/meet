@@ -12,6 +12,6 @@ Then element expands, showing details
 
 Scenario: User can collapse an event to hide its details
 Given user can see details
-When user clicks on details button to collpase it
+When user clicks on details button to collapse it
 Then element collapses, hiding details
 
