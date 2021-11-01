@@ -9,18 +9,17 @@ class NumberOfEvents extends Component {
     inputChange = (e) => {
         let eventCount = e.target.value;
         console.log(eventCount);
-        if (eventCount < 1 || eventCount > 32) {
-            this.setState({
-                numberOfEvents: eventCount,
-                errorText: 'Please enter a number between 1 and 32',
-            });
-        } else if (eventCount = '') {
+        if (eventCount === '') {
             this.setState({
                 numberOfEvents: eventCount,
                 errorText: ''
             });
-        }
-        else {
+        } else if (eventCount < 1 || eventCount > 32) {
+            this.setState({
+                numberOfEvents: eventCount,
+                errorText: 'Please enter a number between 1 and 32',
+            });
+        } else {
             this.setState({
                 numberOfEvents: eventCount,
                 errorText: ''
