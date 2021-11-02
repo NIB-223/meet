@@ -25,7 +25,18 @@ class App extends Component {
         locations: extractLocations(events),
       });
     });
+    if (!navigator.onLine) {
+      this.setState({
+        offlineAlert:
+          "App is running offline, events list may not be up to date.",
+      });
+    }
 
+    if (navigator.onLine) {
+      this.setState({
+        offlineAlert: "",
+      });
+    }
   }
 
   updateEvents = (location, eventCount) => {
