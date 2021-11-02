@@ -1,7 +1,15 @@
+/*rgba(5,96,175,255)
+
+*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+body {
+  margin: 1rem
+}
+
 .App {
   text-align: center;
-  padding: 2% 5%;
+  
 }
 
 .App * {
@@ -17,6 +25,15 @@ p {
   margin: 5px 0;
 }
 
+.nav {
+  display: flex;
+  background-color: white;
+}
+
+.logo {
+  max-width: 150px
+}
+
 .display-none {
   display: none;
 }
@@ -27,13 +44,22 @@ p {
 input[type="text"],
 input[type="number"] {
   padding: 8px 6px 8px 10px;
-  border-radius: 4px;
+  border-radius: 20px;
   outline: none;
   border: 1px solid #ccc;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+   outline: none;
+   border: none;
+   box-shadow: 0px 0px 0px 2.5px blue;
+   background-color: rgb(250, 250, 250);
+
 }
 
 .city {
@@ -58,7 +84,6 @@ input[type="number"] {
   top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
-  
 }
 
 .suggestions > li {
@@ -74,30 +99,66 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: rgb(212, 212, 212);
+  color: black;
+}
+
+.EventList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .event {
+  font-size: 1.15rem;
+  width: 100%;
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 20px;
   position: relative;
+  color: #fff;
+  background-image: linear-gradient(to right top, #215599, #1e549e, #1c54a2, #1b53a7, #1c52ab, #1951b0, #184fb5, #194db9, #184abf, #1b47c5, #2043ca, #283ecf);
+}
+
+.link-div {
+  text-align: center;
+  
+}
+
+.link {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.button-div {
+  text-align: center;
 }
 
 .details-btn {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  outline: none;
+  font-weight: 600;
+  font-size: .85rem;
+  margin-top: 1rem;
+  padding: 10px 62px;
+  border-radius: 20px;
+  color: black;
   cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+}
+
+.details-btn:hover {
+  transition: .25s;
+  background-color: rgb(196, 196, 196);
+}
+
+.details {
+  font-size: 1.05rem;
+ margin-bottom: 2rem;
 }
 
 .name {
-  
   font-weight: 600;
 }
 
@@ -117,7 +178,7 @@ input[type="number"] {
 
 .numberOfEvents {
   width: 200px;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: left;
 }
 
@@ -130,8 +191,9 @@ input[type="number"] {
 }
 
 .Alert {
-  position: fixed;
-  top: 20px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .data-vis-wrapper {
@@ -210,5 +272,26 @@ input[type="number"] {
     max-width: 50%;
     min-width: auto;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+    .EventList {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  .EventList {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .logo {
+    width: 100px;
   }
 }

@@ -3,7 +3,7 @@ import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
     state = {
-        numberOfEvents: 32,
+        numberOfEvents: '',
     };
 
     inputChange = (e) => {
@@ -33,11 +33,14 @@ class NumberOfEvents extends Component {
         const { numberOfEvents } = this.state;
 
         return (
-            <div className="numberOfEvents">
+            <>
                 <ErrorAlert text={this.state.errorText} />
-                <label className="number-of-events">Events: </label>
-                <input type="number" className="change-number" value={numberOfEvents} onChange={this.inputChange} />
-            </div>
+                <div className="numberOfEvents">
+                    {/* <label className="number-of-events">Events: </label> */}
+                    <input type="number" className="change-number" value={numberOfEvents} onChange={this.inputChange} placeholder="Enter number of events..." />
+                </div>
+            </>
+
         );
     }
 };

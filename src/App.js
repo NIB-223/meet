@@ -5,6 +5,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import logo from './img/logo.svg'
 
 class App extends Component {
   state = {
@@ -54,6 +55,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <nav className="nav">
+          <img className="logo" src={logo}></img>
+        </nav>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
