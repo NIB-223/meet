@@ -32,9 +32,9 @@ export const getEvents = async () => {
     }
 
     if (!navigator.onLine) {
-        const data = await localStorage.getItem("lastEvents");
+        const events = await localStorage.getItem("lastEvents");
         NProgress.done();
-        return data ? JSON.parse(events).events : [];;
+        return events ? JSON.parse(events).events : [];;
     }
 
     //Checks for an access token
