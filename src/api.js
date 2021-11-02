@@ -38,6 +38,7 @@ export const getEvents = async () => {
     }
 
     //Checks for an access token
+
     const token = await getAccessToken();
 
     if (token) {
