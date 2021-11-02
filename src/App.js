@@ -3,6 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { OfflineAlert } from './Alert';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 import logo from './img/logo.svg'
@@ -13,6 +14,7 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
     currentLocation: "all",
+    offlineAlert: ''
   };
 
   componentDidMount() {
@@ -23,6 +25,7 @@ class App extends Component {
         locations: extractLocations(events),
       });
     });
+
   }
 
   updateEvents = (location, eventCount) => {
@@ -38,7 +41,20 @@ class App extends Component {
           currentLocation: location,
         });
       });
-    } else {
+    }
+
+    if (!navigator.onLine) {
+      this.setState({
+        offlineAlert: 'App is running offline, events list may not be up to date.'
+      });
+    }
+
+    if (navigator.onLine = true) {
+      this.setState({
+        offlineAlert: ''
+      });
+    }
+    else {
       getEvents().then((events) => {
         const locationEvents = (currentLocation === "all") ?
           events :
@@ -52,12 +68,25 @@ class App extends Component {
     }
   }
 
+  // handleOfflineAlert() {
+  //   if (!navigator.onLine) {
+  //     this.setState({
+  //       offlineAlert: 'App is running offline, events list may not be up to date.'
+  //     });
+  //   } else {
+  //     this.setState({
+  //       offlineAlert: ''
+  //     });
+  //   }
+  // }
+
   render() {
     return (
       <div className="App">
         <nav className="nav">
-          <img className="logo" src={logo}></img>
+          <img className="logo" src={logo} alt="logo"></img>
         </nav>
+        <OfflineAlert text={this.state.offlineAlert} />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
