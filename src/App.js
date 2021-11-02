@@ -79,18 +79,6 @@ class App extends Component {
     }
   }
 
-  // handleOfflineAlert() {
-  //   if (!navigator.onLine) {
-  //     this.setState({
-  //       offlineAlert: 'App is running offline, events list may not be up to date.'
-  //     });
-  //   } else {
-  //     this.setState({
-  //       offlineAlert: ''
-  //     });
-  //   }
-  // }
-
   render() {
     return (
       <div className="App">
