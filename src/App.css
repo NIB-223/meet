@@ -154,6 +154,7 @@ input:focus::placeholder {
   cursor: pointer;
   text-transform: uppercase;
   border: none;
+  background-color: white;
 }
 
 .details-btn:hover {
@@ -261,15 +262,6 @@ input:focus::placeholder {
   width: 18px;
   height: 18px;
 }
-/*👉.btn-text {
-  float: right;
-  margin: 11px 11px 0 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-family: "Roboto";
-}
-👈*/
 
 
 @media only screen and (min-width: 992px) {
