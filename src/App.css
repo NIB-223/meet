@@ -4,7 +4,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 body {
-  margin: 1rem
+  margin: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -28,6 +29,7 @@ p {
 .nav {
   display: flex;
   background-color: white;
+  margin: 1rem;
 }
 
 .logo {
@@ -37,6 +39,7 @@ p {
 .display-none {
   display: none;
 }
+
 .showSuggestions {
   display: block;
 }
@@ -112,6 +115,7 @@ input:focus::placeholder {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
   row-gap: 2rem;
+  margin: 1rem;
 }
 
 .event {
