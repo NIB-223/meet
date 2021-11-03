@@ -60,7 +60,7 @@ class App extends Component {
       });
     }
 
-    if (navigator.onLine === true) {
+    else if (navigator.onLine === true) {
       this.setState({
         offlineAlert: ''
       });

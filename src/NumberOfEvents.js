@@ -44,4 +44,4 @@ class NumberOfEvents extends Component {
         );
     }
 };
-export default NumberOfEvents; 
+export default NumberOfEvents;
