@@ -1,6 +1,4 @@
-/*rgba(5,96,175,255)
 
-*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 body {
@@ -262,19 +260,6 @@ input:focus::placeholder {
   width: 18px;
   height: 18px;
 }
-<<<<<<< HEAD
-=======
-.btn-text {
-  float: right;
-  margin: 11px 11px 0 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-family: "Roboto";
-}
-
->>>>>>> parent of f1179f1 (Added welcome and privacy page)
-
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
