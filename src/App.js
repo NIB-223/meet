@@ -112,8 +112,14 @@ class App extends Component {
           <ResponsiveContainer height={400} >
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
               <CartesianGrid />
-              <XAxis type="category" dataKey="city" name="city" />
-              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+              <XAxis
+                type="category" dataKey="city" name="city"
+                label={{ value: 'city', position: 'insideBottomCenter', dy: 20 }}
+              />
+              <YAxis
+                type="number" dataKey="number" name="number of events" allowDecimals={false}
+                label={{ value: 'number of events', angle: -90, position: 'insideLeft' }}
+              />
               <Tooltip cursor={{ strokeDasharray: '3 3' }} />
               <Scatter data={this.getData()} fill="#8884d8" />
             </ScatterChart>
