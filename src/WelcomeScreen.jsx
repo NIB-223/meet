@@ -36,7 +36,7 @@ function WelcomeScreen(props) {
                 </div>
                 <a
                     className="privacy-link"
-                    href="https://drxl95.github.io/meet/privacy.html"
+                    href="https://Drxl95.github.io/meet/privacy.html"
                     rel="nofollow noopener">
                     Privacy policy
                 </a>
