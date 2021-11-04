@@ -1,5 +1,36 @@
-This app will be a Progressive web application that will be built with React using a test-driven development technique, meaning code will be tested first.  Iw will use Google Calendar API to fetch upcoming events. 
-It will be serverless which means there is no backend maintenance, it's easy to scale, always available, and there is no cost for idle time.  
+# MeetMe
+
+## Description 
+This is a Progressive web application that was built with React using a test-driven and behavior driven development approach .  It consists of a Google Calendar API to fetch upcoming events, and a serverless function hosted by AWS.  
+Users can select a city from a list of suggestions or see all cities, and they can also choose the number of events to see.  It also includes a scatter plot and pie chart.
+
+## Quick Start 🚀
+
+App can be viewed on [GitHub Pages](https://drxl95.github.io/meet/).
+To run it locally yourself, clone the repository, and complete the following steps:
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start application with npm and run in browser
+
+_By default the app will run a local server on port: 3000_
+
+```bash
+npm run start
+```
+
+### Running application tests
+
+```bash
+npm run test
+```
+
+---
+
 
 # FEATURE 1: Filter Events By City
 As a user, I should be able to filter the events by city.
