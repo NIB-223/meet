@@ -105,7 +105,7 @@ class App extends Component {
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
 
-        <h4>Events in each city</h4>
+        <h4 style={{ fontSize: "2rem", margin: "3.5rem 0 2.5rem" }}>Events in each city</h4>
 
         <div className="data-vis-wrapper">
           <EventGenre events={this.state.events} />
@@ -114,11 +114,11 @@ class App extends Component {
               <CartesianGrid />
               <XAxis
                 type="category" dataKey="city" name="city"
-                label={{ value: 'city', position: 'insideBottomCenter', dy: 20 }}
+                label={{ value: 'City', position: 'insideBottomCenter', dy: 20 }}
               />
               <YAxis
                 type="number" dataKey="number" name="number of events" allowDecimals={false}
-                label={{ value: 'number of events', angle: -90, position: 'insideLeft' }}
+                label={{ value: 'Number of Events', angle: -90, position: 'insideLeft' }}
               />
               <Tooltip cursor={{ strokeDasharray: '3 3' }} />
               <Scatter data={this.getData()} fill="#8884d8" />
