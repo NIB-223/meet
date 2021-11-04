@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const EventGenre = ({ events }) => {
-
     const [data, setData] = useState([]);
     const COLORS = ['#f8b195', '#f67280', '#c06c87', '#6c5b7b', '#355c7d'];
 
@@ -44,6 +43,5 @@ const EventGenre = ({ events }) => {
     )
 
 };
-
 
 export default EventGenre;

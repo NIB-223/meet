@@ -3,7 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import EventGenre from './EventGenre'
+import EventGenre from './EventGenre';
 import { OfflineAlert } from './Alert';
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
@@ -83,7 +83,7 @@ class App extends Component {
   };
 
   render() {
-    const { locations, numberOfEvents, events } = this.state;
+
     return (
       <div className="App">
         <nav className="nav">
@@ -97,7 +97,7 @@ class App extends Component {
         <h4>Events in each city</h4>
 
         <div className="data-vis-wrapper">
-          <EventGenre event={this.state.events} />
+          <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400} >
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
               <CartesianGrid />
