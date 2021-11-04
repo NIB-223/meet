@@ -30,6 +30,7 @@ body {
     border-radius: 20px;
 }
 .google-logo {
+    margin-top: 2.5rem;
     max-width: 150px;
 }
 .welcome-text {
@@ -110,13 +111,22 @@ body {
         height: 400px;
     }
     .google-logo {
-        width: 100px;
+        margin-top: 1.75rem;
+        width: 120px;
     }
     .welcome-text {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
+    
 }
+
+@media only screen and (max-width: 800px) and (min-width: 400px) {
+    .privacy-link {
+        margin-top: 5rem;
+    }
+}
+
 
 @media only screen and (max-width: 600px) {
     .content-container {
