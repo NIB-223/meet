@@ -11,7 +11,6 @@ import { OfflineAlert } from './Alert';
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
-// import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 import logo from './img/logo.svg'
 
@@ -53,28 +52,6 @@ class App extends Component {
       });
     }
   }
-
-  // componentDidMount() {
-  //   getEvents().then((events) => {
-  //     const filteredEvents = events.slice(0, this.state.numberOfEvents);
-  //     this.setState({
-  //       events: filteredEvents,
-  //       locations: extractLocations(events),
-  //     });
-  //   });
-  //   if (!navigator.onLine) {
-  //     this.setState({
-  //       offlineAlert:
-  //         "App is running offline, events list may not be up to date.",
-  //     });
-  //   }
-
-  //   if (navigator.onLine) {
-  //     this.setState({
-  //       offlineAlert: "",
-  //     });
-  //   }
-  // }
 
   updateEvents = (location, eventCount) => {
     const { currentLocation, numberOfEvents } = this.state;
