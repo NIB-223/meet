@@ -39,7 +39,6 @@ class NumberOfEvents extends Component {
                     <input type="number" className="change-number" value={numberOfEvents} onChange={this.inputChange} placeholder="Enter number of events..." />
                 </div>
             </>
-
         );
     }
 };

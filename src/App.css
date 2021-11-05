@@ -147,13 +147,6 @@ input:focus::placeholder {
     background-image: -o-linear-gradient(left bottom, #215599, #1e549e, #1c54a2, #1b53a7, #1c52ab, #1951b0, #184fb5, #194db9, #184abf, #1b47c5, #2043ca, #283ecf);
     background-image: linear-gradient(to right top, #215599, #1e549e, #1c54a2, #1b53a7, #1c52ab, #1951b0, #184fb5, #194db9, #184abf, #1b47c5, #2043ca, #283ecf);
 }
-.link-div {
-    text-align: center;
-}
-.link {
-    color: white;
-    font-size: 1.15rem;
-}
 .button-div {
     text-align: center;
 }

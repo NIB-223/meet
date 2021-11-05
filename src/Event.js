@@ -23,9 +23,6 @@ class Event extends Component {
                     <p className="location">{event.location}</p>
                     <h3>About event:</h3>
                     <p className="details">{!this.state.detailsOpen ? "" : event.description}</p>
-                    <div className="link-div">
-                        <a className="link" href="#">See details on Google Calendar</a>
-                    </div>
                     <div className="button-div">
                         <button className="details-btn" onClick={() => {
                             this.showDetails()
