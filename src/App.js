@@ -34,13 +34,18 @@ class App extends Component {
     this.setState({ showWelcomeScreen: !(code || isTokenValid) });
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
+        const filteredEvents = events.slice(0, this.state.numberOfEvents);
         if (this.mounted) {
-          this.setState({ events, locations: extractLocations(events) });
+          this.setState({
+            events: filteredEvents,
+            locations: extractLocations(events)
+          });
         }
       });
     }
     if (!navigator.onLine) {
       this.setState({
+
         offlineAlert:
           "App is running offline, events list may not be up to date.",
       });
@@ -48,6 +53,7 @@ class App extends Component {
 
     if (navigator.onLine) {
       this.setState({
+
         offlineAlert: "",
       });
     }
