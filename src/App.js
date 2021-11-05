@@ -45,7 +45,6 @@ class App extends Component {
     }
     if (!navigator.onLine) {
       this.setState({
-
         offlineAlert:
           "App is running offline, events list may not be up to date.",
       });
@@ -53,7 +52,6 @@ class App extends Component {
 
     if (navigator.onLine) {
       this.setState({
-
         offlineAlert: "",
       });
     }
