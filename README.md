@@ -1,5 +1,6 @@
 # MeetMe
 <img src="src/img/meet-mockup3.png" rel="app_mockup">
+
 ## Description 
 This is a Progressive web application that was built with React using a test-driven and behavior driven development approach .  It consists of a Google Calendar API to fetch upcoming events, and a serverless function hosted by AWS.  
 Users can select a city from a list of suggestions or see all cities, and they can also choose the number of events to see.  It also includes a scatter plot and pie chart.
